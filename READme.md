@@ -19,17 +19,17 @@ In my example -:
 
   //Main program
 
-  QueryDB db = new QueryDB();
-
-  List<Heroes> heroes = db.All("Heroes").Get<Heroes>().ToList();
+      QueryDB db = new QueryDB();
+    
+      List<Heroes> heroes = db.All("Heroes").Get<Heroes>().ToList();
 
 Here I am querying the database by using the All() method to get all.
 
 This will also work -:
 
-  List<Heroes> heroes = db.Select("*").From("Heroes").Get<Heroes>().ToList();
+      List<Heroes> heroes = db.Select("*").From("Heroes").Get<Heroes>().ToList();
 
 If I have a stored procedure which gets me all the heroes, I can call it and get the same result
 
-  List<Heroes> heroes = db.StoredProcedure("GetAllHeroes").Get<Heroes>(new {  }, true).ToList();
+      List<Heroes> heroes = db.StoredProcedure("GetAllHeroes").Get<Heroes>(new {  }, true).ToList();
 
