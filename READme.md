@@ -6,7 +6,7 @@ Make sure you have a model setup, and the table in the database, make sure the m
 
 In my example -:
 
-    // Heroes model
+ Heroes model
     public class Heroes
     {
         public int Id { get; set; }
@@ -17,7 +17,7 @@ In my example -:
     }
 
 
-  //Main program
+  Main program
 
       QueryDB db = new QueryDB();
     
